@@ -37,19 +37,19 @@ list.forEach((item) =>
 // --------------navigation bar scroll open---------
 
 
-// const header = document.getElementById("navbar");
-// const sticky = header.offsetTop;
+const header = document.getElementById("navbar");
+const sticky = header.offsetTop;
 
-// console.log(sticky)
+console.log(sticky)
 
-// window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {
 
-//     if (window.pageYOffset > (80)) {
-//         header.classList.add('sticky');
-//     } else (
-//         header.classList.remove('sticky')
-//     )
-// })
+    if (window.pageYOffset > (80)) {
+        header.classList.add('sticky');
+    } else (
+        header.classList.remove('sticky')
+    )
+})
 
 
 //-----------gsap animation start-----------------
@@ -271,7 +271,7 @@ gsap.from(items, {
   ease: "power1.in",
   snap: { textContent: 1 },
   stagger: {
-    each: 1.0,
+    each: 0.5,
     onUpdate: function() {
       this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
     },
