@@ -168,6 +168,36 @@ a {
     font-family: var(--ns-ff-russo);
 }
 
+.back__btn {
+   
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    z-index: 100;
+}
+.back__btn span a{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    background-color: transparent;
+    border: 1px solid var(--ns-theme-primary);
+    border-radius: 50%;
+ 
+}
+.back__btn span a i {
+    color: #8750f7;
+    font-size: var(--ns-fs-h3);
+    padding: 0%;
+}
+
+.back__btn span a:hover {
+    background-color: var(--ns-theme-primary);
+    border: 1px solid var(--ns-white);
+    color: #fff;
+}
+.back__btn span a:hover i{
+    color: #fff;
+}
 @media screen and (min-width: 1400px) {
     :root {
         --ns-fs-body: 18px;
