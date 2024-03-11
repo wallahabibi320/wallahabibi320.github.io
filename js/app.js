@@ -247,3 +247,38 @@ tl.from(".form__animation", {
         scrub: 2,
     }
 })
+
+
+
+
+// const items = document.querySelectorAll(".data");
+// 
+// gsap.from(items, {
+//   textContent: 0,
+//   duration: 4,
+//   ease: Power1.easeIn,
+//   snap: { textContent: 1 },
+//   stagger: 1,
+//   // onUpdate: textContent.replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+// });
+
+
+const items = document.querySelectorAll(".data");
+
+gsap.from(items, {
+  textContent: 0,
+  duration: 4,
+  ease: "power1.in",
+  snap: { textContent: 1 },
+  stagger: {
+    each: 1.0,
+    onUpdate: function() {
+      this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+    },
+  }
+});
+
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
