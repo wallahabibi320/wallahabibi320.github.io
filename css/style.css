@@ -86,10 +86,10 @@ Description: Gerold - Personal Portfolio HTML5 Template
     --ns-fs-h1: 60px;
     --ns-fs-h2: 45px;
     --ns-fs-h3: 32px;
-    --ns-fs-h4: 24px;
-    --ns-fs-h5: 22px;
-    --ns-fs-h6: 18px;
-    --ns-fs-sub-title: 36px;
+    --ns-fs-h4: 20px;
+    --ns-fs-h5: 18px;
+    --ns-fs-h6: 16px;
+    --ns-fs-sub-title: 26px;
 }
 
 * {
@@ -169,21 +169,23 @@ a {
 }
 
 .back__btn {
-   
+
     position: fixed;
     bottom: 2rem;
     right: 1rem;
     z-index: 100;
 }
-.back__btn span a{
+
+.back__btn span a {
     display: flex;
     align-items: center;
     padding: .5rem;
     background-color: transparent;
     border: 1px solid var(--ns-theme-primary);
     border-radius: 50%;
- 
+
 }
+
 .back__btn span a i {
     color: #8750f7;
     font-size: var(--ns-fs-h3);
@@ -195,9 +197,11 @@ a {
     border: 1px solid var(--ns-white);
     color: #fff;
 }
-.back__btn span a:hover i{
+
+.back__btn span a:hover i {
     color: #fff;
 }
+
 @media screen and (min-width: 1400px) {
     :root {
         --ns-fs-body: 18px;
@@ -578,7 +582,7 @@ nav ul li a:hover::after {
 .arrow__icon i {
     font-size: 2.5rem;
     rotate: 30deg;
-    /* transition: all ease .3s; */
+    transition: all ease .3s;
 }
 
 .works__menu {
@@ -652,9 +656,9 @@ nav ul li a:hover::after {
     padding: 1.1rem;
     border-radius: 1rem;
     background: linear-gradient(90deg, rgba(135, 80, 247, 1) 0%, rgba(42, 20, 84, 1) 100%);
-    visibility:hidden;
+    visibility: hidden;
     transition: all ease .3s;
-   
+
 }
 
 
@@ -672,7 +676,7 @@ nav ul li a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 48%;
+    width: 49%;
 }
 
 .resume__header {
@@ -949,6 +953,9 @@ nav ul li a:hover::after {
         --ns-fs-h1: 55px;
         --ns-fs-h2: 35px;
         --ns-fs-h3: 25px;
+        --ns-fs-h4: 16px;
+        --ns-fs-h5: 15px;
+        --ns-fs-h6: 13px;
     }
 
     .container {
@@ -1049,8 +1056,8 @@ nav ul li a:hover::after {
         position: absolute;
         top: 10%;
         right: 2%;
-     
-}
+
+    }
 
     .content__prg-box .content__prg {
         width: 100%;
@@ -1103,6 +1110,11 @@ nav ul li a:hover::after {
 }
 
 @media screen and (max-width: 768px) {
+
+    :root {
+        --ns-fs-sub-title: 20px;
+
+    }
 
     .hero__content {
         padding-top: 0;
@@ -1176,8 +1188,6 @@ nav ul li a:hover::after {
         --ns-fs-h1: 40px;
         --ns-fs-h2: 30px;
         --ns-fs-h3: 25px;
-        --ns-fs-h5: 18px;
-        --ns-fs-sub-title: 26px;
     }
 
     .first__section {
@@ -1248,7 +1258,9 @@ nav ul li a:hover::after {
 @media screen and (max-width: 548px) {
 
     :root {
-        --ns-fs-h4: 20px;
+        --ns-fs-h4: 18px;
+        --ns-fs-h5: 15px;
+        --ns-fs-h6: 13px;
     }
 
     .loading__screen .loading__icon {
@@ -1262,6 +1274,13 @@ nav ul li a:hover::after {
     .section__content {
         padding: 1rem;
 
+    }
+
+    .hero__info .hero__title-box .hero__image {
+        width: 280px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 10%);
     }
 
     .hero__bottom {
